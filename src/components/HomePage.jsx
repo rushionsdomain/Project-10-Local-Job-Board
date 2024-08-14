@@ -66,48 +66,7 @@ function HomePage() {
         </section>
       </main>
 
-      <footer className="footer">
-        <div className="footer-content">
-          <div className="footer-logo">
-            <div>LOGO</div>
-          </div>
-          <div className="footer-links">
-            <div className="footer-column">
-              <h4>Use Cases</h4>
-              <ul>
-                <li><a href="#">UI Design</a></li>
-                <li><a href="#">UX Design</a></li>
-                <li><a href="#">Wireframing</a></li>
-                <li><a href="#">Diagramming</a></li>
-                <li><a href="#">Brainstorming</a></li>
-                <li><a href="#">Team Collaboration</a></li>
-              </ul>
-            </div>
-            <div className="footer-column">
-              <h4>Explore</h4>
-              <ul>
-                <li><a href="#">Design</a></li>
-                <li><a href="#">Prototyping</a></li>
-                <li><a href="#">Development</a></li>
-                <li><a href="#">Design Systems</a></li>
-                <li><a href="#">Collaboration</a></li>
-                <li><a href="#">Design Process</a></li>
-              </ul>
-            </div>
-            <div className="footer-column">
-              <h4>Resources</h4>
-              <ul>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Best Practices</a></li>
-                <li><a href="#">Colors</a></li>
-                <li><a href="#">Support</a></li>
-                <li><a href="#">Developers</a></li>
-                <li><a href="#">Resource Library</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </footer>
+      
     </div>
   );
 }

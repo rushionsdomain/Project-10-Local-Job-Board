@@ -31,7 +31,7 @@ function Footer() {
                         </ul>
                     </div>
                     <div className="footer-section">
-                    
+                    <h4>Extras</h4>
                         <ul>
                             <li>Community Guidelines</li>
                             <li>Privacy & Terms</li>
