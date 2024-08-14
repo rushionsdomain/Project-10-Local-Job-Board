@@ -18,6 +18,7 @@ function App() {
         <Route path="/" element={<RegisterForm />} />
       </Routes>
     </Router>
+    <Footer />
     </>
   );
 }
