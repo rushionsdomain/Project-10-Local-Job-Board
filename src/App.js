@@ -1,15 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
-import HomePage from './components/HomePage';
-import Footer from './components/Footer';
 
+import './App.css';
+
+import SignInForm from './components/SignInForm';
+import RegisterForm from './components/RegisterForm';
 
 function App() {
   return (
-    <>
-      <HomePage/>
-      <Footer/>
-    </>
+    <div >
+      <SignInForm/>
+      <RegisterForm/>
+      
+    </div>
+
+
   );
 }
 
