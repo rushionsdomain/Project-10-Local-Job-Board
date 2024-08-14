@@ -18,7 +18,7 @@
   
   .form-title {
     font-size: 18px;
-    color: #9b5de5;
+    color: #0d42d4;
     margin-bottom: 20px;
     text-transform: lowercase;
   }
@@ -47,7 +47,7 @@
   .submit-button {
     width: 100%;
     padding: 12px 0;
-    background-color: #9b5de5;
+    background-color: #0d42d4;
     border: none;
     border-radius: 8px;
     color: #fff;
@@ -57,7 +57,7 @@
   }
   
   .submit-button:hover {
-    background-color: #7d42bd;
+    background-color: #0d42d4;
   }
   
   .form-footer {
@@ -68,7 +68,7 @@
   }
   
   .form-footer a {
-    color: #9b5de5;
+    color: #0d42d4;
     text-decoration: none;
   }
   
