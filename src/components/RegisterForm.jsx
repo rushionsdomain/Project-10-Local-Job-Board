@@ -1,4 +1,4 @@
-// RegisterForm.js
+
 import React, { useState } from 'react';
 import './RegisterForm.css';
 import axios from 'axios';
