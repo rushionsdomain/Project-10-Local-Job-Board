@@ -1,17 +1,22 @@
+
+import './App.css';
+
+import SignInForm from './components/SignInForm';
+import RegisterForm from './components/RegisterForm';
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import logo from './logo.svg';
-import './App.css';
-import HomePage from './components/HomePage';
-import Footer from './components/Footer';
-
 
 function App() {
   return (
-    <>
-    <HomePage />
-    <Footer />
-    </>
+    <div >
+      <SignInForm/>
+      <RegisterForm/>
+       <HomePage />
+        <Footer />
+      
+    </div>
+
   );
 }
 
