@@ -1,117 +1,49 @@
-.header {
+/* Landing.css */
+.landing-container {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  padding: 20px;
-  background-color: #f8f8f8;
+  height: 100vh;
+  background-color: #f3f2ef; /* LinkedIn background color */
 }
 
-.logo {
-  font-size: 24px;
-  font-weight: bold;
+.landing-header {
+  text-align: center;
 }
 
-.navbar {
-  display: flex;
-  align-items: center;
+.landing-header h1 {
+  font-size: 48px;
+  color: #0073b1; /* LinkedIn primary color */
 }
 
-.nav-links {
-  display: flex;
-  list-style: none;
-}
-
-.nav-links li {
-  margin: 0 15px;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: #333;
+.landing-header p {
+  font-size: 20px;
+  color: #666;
 }
 
 .auth-buttons {
-  display: flex;
-  gap: 10px;
-}
-
-.sign-in-btn,
-.register-btn {
-  padding: 10px 20px;
-  border: 1px solid #333;
-  background: none;
-  cursor: pointer;
-}
-
-.register-btn {
-  background-color: #333;
-  color: #fff;
-}
-
-.homepage {
-  font-family: Arial, sans-serif;
-  padding: 20px;
-  background-color: #f9f9f9;
-}
-
-.search-container {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.search-box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 10px;
-}
-
-.search-box input {
-  width: 300px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px 0 0 5px;
-}
-
-.search-button {
-  padding: 10px;
-  background-color: #007bff;
-  border: none;
-  color: white;
-  border-radius: 0 5px 5px 0;
-  cursor: pointer;
-}
-
-.jobs-section {
   margin-top: 20px;
 }
 
-.jobs-section h2 {
-  border-bottom: 2px solid #007bff;
-  display: inline-block;
-  margin-bottom: 10px;
-}
-
-.job-card {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: white;
-  padding: 15px;
-  margin-bottom: 10px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.job-info {
-  max-width: 70%;
-}
-
-.more-button {
-  padding: 10px 20px;
-  background-color: #007bff;
-  border: none;
+.auth-buttons .btn-login,
+.auth-buttons .btn-signup {
+  padding: 12px 24px;
+  margin: 0 10px;
+  font-size: 16px;
   color: white;
+  background-color: #0073b1;
+  border: none;
   border-radius: 5px;
   cursor: pointer;
+  text-decoration: none;
+}
+
+.auth-buttons .btn-signup {
+  background-color: #0a66c2;
+}
+
+.auth-buttons .btn-login:hover,
+.auth-buttons .btn-signup:hover {
+  opacity: 0.9;
 }

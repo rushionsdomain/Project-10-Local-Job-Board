@@ -1,25 +1,25 @@
-/* Profile.css */
-.profile-container {
+/* JobDetails.css */
+.job-details-container {
   background-color: #f3f2ef;
   padding: 20px;
 }
 
-.profile {
+.job-details {
   background-color: white;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.profile h2 {
+.job-details h2 {
   color: #0073b1;
 }
 
-.profile-info p {
+.job-details p {
   color: #666;
 }
 
-.edit-button {
+.apply-button {
   margin-top: 20px;
   padding: 12px 20px;
   background-color: #0073b1;
@@ -29,6 +29,6 @@
   cursor: pointer;
 }
 
-.edit-button:hover {
+.apply-button:hover {
   background-color: #005f90;
 }

@@ -1,24 +1,23 @@
+/* Navbar.css */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background-color: #0077b5;
-  color: white;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.navbar-logo a {
+.navbar-logo {
   font-size: 24px;
-  font-weight: bold;
-  color: white;
-  text-decoration: none;
+  color: #0073b1;
 }
 
 .navbar-links a {
   margin-left: 20px;
-  color: white;
   text-decoration: none;
-  font-weight: 500;
+  color: #0073b1;
+  font-weight: bold;
 }
 
 .navbar-links a:hover {

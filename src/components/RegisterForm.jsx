@@ -1,62 +1,58 @@
+// RegisterForm.jsx
+import React, { useState } from "react";
+import "./RegisterForm.css";
 
-import React, { useState } from 'react';
-import './RegisterForm.css';
-import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+const RegisterForm = () => {
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    password: "",
+  });
 
-function RegisterForm() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [role, setRole] = useState('jobseeker');
-  const [error, setError] = useState(null);
-  const navigate = useNavigate();
+  const handleChange = (e) => {
+    setForm({
+      ...form,
+      [e.target.name]: e.target.value,
+    });
+  };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    try {
-      const response = await axios.post('http://localhost:3000/users', {
-        email,
-        password,
-        role,
-      });
-
-      if (response.status === 201) {
-        console.log('User registered successfully');
-        navigate('/signin'); // Redirect to sign-in page or another page
-      }
-    } catch (err) {
-      console.error('Error registering user:', err);
-      setError('Failed to register. Please try again.');
-    }
+    // handle registration logic
   };
 
   return (
-    <div className="RegisterForm">
-      <h2>Register</h2>
-      {error && <p className="error">{error}</p>}
-      <form onSubmit={handleSubmit}>
+    <div className="register-container">
+      <form className="register-form" onSubmit={handleSubmit}>
+        <h2>Join Net-Work</h2>
+        <input
+          type="text"
+          name="name"
+          placeholder="Name"
+          value={form.name}
+          onChange={handleChange}
+          required
+        />
         <input
           type="email"
+          name="email"
           placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          value={form.email}
+          onChange={handleChange}
           required
         />
         <input
           type="password"
+          name="password"
           placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
+          value={form.password}
+          onChange={handleChange}
           required
         />
-        <select value={role} onChange={(e) => setRole(e.target.value)}>
-          <option value="jobseeker">Job Seeker</option>
-          <option value="employer">Employer</option>
-        </select>
-        <button type="submit">Register</button>
+        <button type="submit">Join</button>
       </form>
     </div>
   );
-}
+};
 
 export default RegisterForm;

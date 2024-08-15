@@ -1,29 +1,29 @@
+// Profile.jsx
 import React from "react";
+import Navbar from "./Navbar";
 import "./Profile.css";
 
-function Profile() {
+const Profile = () => {
   return (
-    <div className="profile-page">
-      <div className="profile-header">
-        <img className="profile-pic" src="profile-pic-url" alt="Profile" />
-        <h2>User Name</h2>
-        <p>Professional Title</p>
-      </div>
-      <div className="profile-content">
-        <section className="profile-summary">
-          <h3>Summary</h3>
-          <p>Brief description about the user...</p>
-        </section>
-        <section className="profile-experience">
-          <h3>Experience</h3>
-          <ul>
-            <li>Job 1 - Company</li>
-            <li>Job 2 - Company</li>
-          </ul>
-        </section>
+    <div className="profile-container">
+      <Navbar />
+      <div className="profile">
+        <h2>Your Profile</h2>
+        <div className="profile-info">
+          <p>
+            <strong>Name:</strong> Francis Chegge
+          </p>
+          <p>
+            <strong>Email:</strong> francis@example.com
+          </p>
+          <p>
+            <strong>Location:</strong> Nairobi
+          </p>
+        </div>
+        <button className="edit-button">Edit Profile</button>
       </div>
     </div>
   );
-}
+};
 
 export default Profile;

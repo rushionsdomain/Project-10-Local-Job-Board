@@ -1,26 +1,25 @@
+// Landing.jsx
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Landing.css";
 
-function Landing() {
+const Landing = () => {
   return (
-    <div className="landing-page">
+    <div className="landing-container">
       <header className="landing-header">
         <h1>Welcome to Net-Work</h1>
-        <p>
-          Connect with professionals, explore job opportunities, and grow your
-          network.
-        </p>
-        <div className="landing-buttons">
-          <a href="/signup" className="signup-button">
-            Join Now
-          </a>
-          <a href="/login" className="login-button">
+        <p>Your local platform to connect businesses and job seekers</p>
+        <div className="auth-buttons">
+          <Link to="/login" className="btn-login">
             Sign In
-          </a>
+          </Link>
+          <Link to="/signup" className="btn-signup">
+            Join Now
+          </Link>
         </div>
       </header>
     </div>
   );
-}
+};
 
 export default Landing;

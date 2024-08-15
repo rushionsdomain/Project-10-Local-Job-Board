@@ -1,3 +1,4 @@
+// App.js
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import SignUp from "./components/RegisterForm";
@@ -6,14 +7,11 @@ import Home from "./components/HomePage";
 import JobList from "./components/JobList";
 import JobDetails from "./components/JobDetails";
 import Profile from "./components/Profile";
-import Landing from "./components/Landing";
-import Navbar from "./components/Navbar";
-import ChatWindow from "./components/ChatWindow";
+import Landing from "./components/Landing"; // New Landing Page Component
 
 function App() {
   return (
     <Router>
-      <Navbar />
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/signup" element={<SignUp />} />
@@ -22,7 +20,6 @@ function App() {
         <Route path="/jobs" element={<JobList />} />
         <Route path="/jobs/:id" element={<JobDetails />} />
         <Route path="/profile" element={<Profile />} />
-        <Route path="/messaging" element={<ChatWindow />} />
       </Routes>
     </Router>
   );

@@ -1,98 +1,23 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
+/* HomePage.css */
+.home-container {
   background-color: #f3f2ef;
-}
-
-.header {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  padding: 10px 20px;
-  background-color: #0a66c2;
-  color: #fff;
 }
 
-.logo {
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.nav a {
-  color: #fff;
-  margin-left: 20px;
-  text-decoration: none;
-}
-
-.nav a:hover {
-  text-decoration: underline;
-}
-
-.hero {
-  text-align: center;
-  padding: 50px 20px;
-  background-color: #004182;
-  color: #fff;
-}
-
-.search-bar {
+.feed {
+  width: 70%;
   margin-top: 20px;
-  padding: 10px;
-  width: 60%;
-  border-radius: 25px;
-  border: none;
-  font-size: 16px;
 }
 
-.featured-jobs,
-.featured-employers {
-  padding: 40px 20px;
-  background-color: #fff;
-}
-
-.featured-jobs h2,
-.featured-employers h2 {
+.feed h2 {
+  color: #0073b1;
   margin-bottom: 20px;
 }
 
-.job-list,
-.employer-list {
+.job-list {
   display: flex;
-  justify-content: space-around;
-}
-
-.job-card,
-.employer-card {
-  background-color: #eef3f8;
-  padding: 20px;
-  border-radius: 10px;
-  width: 250px;
-  text-align: center;
-}
-
-.job-card h3,
-.employer-card h3 {
-  margin-bottom: 10px;
-  font-size: 18px;
-  color: #0a66c2;
-}
-
-.job-card button {
-  background-color: #0a66c2;
-  color: #fff;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-}
-
-.job-card button:hover {
-  background-color: #004182;
-}
-
-.footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #0a66c2;
-  color: #fff;
+  flex-direction: column;
+  gap: 20px;
 }

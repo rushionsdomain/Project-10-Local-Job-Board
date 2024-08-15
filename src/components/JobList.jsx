@@ -1,28 +1,31 @@
-import React, { useState } from "react";
+// JobList.jsx
+import React from "react";
+import Navbar from "./Navbar";
 import JobItem from "./JobItem";
+import "./JobList.css";
 
-const JobList = ({ jobs, onJobSelect }) => {
-  const [filter, setFilter] = useState("");
-
-  const filteredJobs = jobs.filter(
-    (job) =>
-      job.title.toLowerCase().includes(filter.toLowerCase()) ||
-      job.company.toLowerCase().includes(filter.toLowerCase()) ||
-      job.location.toLowerCase().includes(filter.toLowerCase())
-  );
-
+const JobList = () => {
   return (
-    <div className="job-list">
-      <input
-        type="text"
-        placeholder="Filter jobs by title, company, or location..."
-        value={filter}
-        onChange={(e) => setFilter(e.target.value)}
-        className="job-filter-input"
-      />
-      {filteredJobs.map((job) => (
-        <JobItem key={job.id} job={job} onClick={onJobSelect} />
-      ))}
+    <div className="job-list-container">
+      <Navbar />
+      <div className="job-list">
+        <h2>Available Jobs</h2>
+        <JobItem
+          title="Product Manager"
+          company="InnovateTech"
+          location="Nakuru"
+        />
+        <JobItem
+          title="UX Designer"
+          company="CreativeMinds"
+          location="Nairobi"
+        />
+        <JobItem
+          title="HR Specialist"
+          company="HR Solutions"
+          location="Thika"
+        />
+      </div>
     </div>
   );
 };
