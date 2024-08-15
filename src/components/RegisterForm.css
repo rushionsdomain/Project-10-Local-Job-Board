@@ -55,3 +55,22 @@
     margin-bottom: 15px;
   }
   
+  .register-btn {
+    border: none;
+    background-color: #28a745;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 8px 16px;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 4px;
+    margin-left: 10px;
+  }
+
+  .register-btn:hover{
+    transition: 0.5s ease;
+    background-color: red;
+    color: blue;
+    opacity: 0.8;
+  }

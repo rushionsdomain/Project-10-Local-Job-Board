@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link }from 'react-router-dom';
 import './homepage.css'; 
+import './SignInForm.css';
+import './RegisterForm.css';
 
 function HomePage() {
   return (
