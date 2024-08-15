@@ -1,23 +1,26 @@
+// SignInForm.js
 import React, { useState } from 'react';
 import './SignInForm.css';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
-
 function SignInForm() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState(null);
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     try {
-      const response = await axios.get(`http://localhost:3000/users?email=${email}&password=${password}`);
+      const response = await axios.post('http://localhost:3000/users/login', {
+        email,
+        password,
+      });
 
-      if (response.data.length > 0) {
-        // Handle successful sign in, e.g., redirect to the home page or store user information
+      if (response.data.success) {
         console.log('Sign in successful');
+        navigate('/home'); // Redirect to home page or another page
       } else {
         setError('Invalid email or password');
       }
@@ -30,7 +33,7 @@ function SignInForm() {
   return (
     <div className="SignInForm">
       <h2>Sign In</h2>
-      {error && <p>{error}</p>}
+      {error && <p className="error">{error}</p>}
       <form onSubmit={handleSubmit}>
         <input
           type="email"

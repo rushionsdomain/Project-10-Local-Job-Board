@@ -1,3 +1,4 @@
+// RegisterForm.js
 import React, { useState } from 'react';
 import './RegisterForm.css';
 import axios from 'axios';
@@ -8,10 +9,10 @@ function RegisterForm() {
   const [password, setPassword] = useState('');
   const [role, setRole] = useState('jobseeker');
   const [error, setError] = useState(null);
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     try {
       const response = await axios.post('http://localhost:3000/users', {
         email,
@@ -21,6 +22,7 @@ function RegisterForm() {
 
       if (response.status === 201) {
         console.log('User registered successfully');
+        navigate('/signin'); // Redirect to sign-in page or another page
       }
     } catch (err) {
       console.error('Error registering user:', err);
@@ -31,7 +33,7 @@ function RegisterForm() {
   return (
     <div className="RegisterForm">
       <h2>Register</h2>
-      {error && <p>{error}</p>}
+      {error && <p className="error">{error}</p>}
       <form onSubmit={handleSubmit}>
         <input
           type="email"
