@@ -1,6 +1,7 @@
 
 import './App.css';
-
+import HomePage from './components/HomePage';
+import Footer from './components/Footer'
 import SignInForm from './components/SignInForm';
 import RegisterForm from './components/RegisterForm';
 import React from 'react';
