@@ -1,0 +1,67 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #afb1b4; /* Darker shade for a modern look */
+    padding: 1rem 2rem; /* Added more padding for a spacious layout */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.navbar-logo img {
+    height: 60px; /* Adjusted logo size */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.navbar-logo img:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+.navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem; /* Increased spacing between links */
+}
+
+.navbar-links li a {
+    color: black; /* Set text color to black */
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* Space between icon and text */
+}
+
+.navbar-links li a:hover {
+    color: #3498DB; /* Blue color on hover */
+    transform: translateY(-3px); /* Subtle lift effect */
+    text-decoration: underline;
+}
+
+.navbar-search {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.navbar-search input {
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+.navbar-search button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.navbar-search button:hover box-icon {
+    color: #3498DB; /* Change icon color on hover */
+}
+
+.box-icon {
+    fill: currentColor; /* Makes icons inherit text color */
+}

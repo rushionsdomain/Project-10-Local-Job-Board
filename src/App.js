@@ -1,11 +1,13 @@
 import React from 'react';
 import './App.css';
+import Navbar from './components/Navbar';
 import ApplyForm from './components/ApplyForm';
 
 function App() {
   return (
         <div>
-           <ApplyForm/>
+         <Navbar />
+         <ApplyForm/>
         </div>
  );
 }
