@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #afb1b4; /* Darker shade for a modern look */
+    background-color: #1d64cf; /* Darker shade for a modern look */
     padding: 1rem 2rem; /* Added more padding for a spacious layout */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
