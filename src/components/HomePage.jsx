@@ -1,98 +1,66 @@
-import React from 'react';
-import { Link }from 'react-router-dom';
-import './homepage.css'; 
+import React from "react";
+import "./HomePage.css";
 
-function HomePage() {
+const HomePage = () => {
   return (
-    <div className="home-page">
+    <div className="homepage">
       <header className="header">
-        <div className="logo">
-          <img src=".src//assets/network.jpeg" alt="logo"/>
-        </div>
-
-        <nav className="navbar">
-          <ul className="nav-links">
-            <li><a href="#">Pricing</a></li>
-            <li><a href="#">Solutions</a></li>
-            <li><a href="#">Community</a></li>
-            <li><a href="#">Resources</a></li>
-          </ul>
-          <div className="auth-buttons">
-            <button className="sign-in-btn">Sign In</button>
-            <button className="register-btn">Register</button>
-          </div>
+        <div className="logo">Local Job Board</div>
+        <nav className="nav">
+          <a href="#jobs">Jobs</a>
+          <a href="#employers">Employers</a>
+          <a href="#profile">Profile</a>
+          <a href="#login">Sign In</a>
         </nav>
       </header>
 
-        <main>
-          <div className="homepage">
-          <div className="search-container">
-            <h1>YOUR DREAM JOB IS HERE</h1>
-            <div className="search-box">
-              <input type="text" placeholder="Search jobs" />
-              <button className="search-button">🔍</button>
-            </div>
-          </div>
+      <section className="hero">
+        <h1>Find Your Dream Job Locally</h1>
+        <p>Connecting local businesses and job seekers efficiently.</p>
+        <input
+          type="text"
+          placeholder="Search jobs..."
+          className="search-bar"
+        />
+      </section>
 
-          <div className="jobs-section">
-            <h2>JOBS FOR YOU</h2>
-            <div className="job-card">
-              <div className="job-info">
-                <h3>UX/UI designer</h3>
-                <p>Upwork | Remote (On)</p>
-                <p>On Upwork you'll find a range of top freelancers and agencies...</p>
-              </div>
-              <button className="more-button">MORE</button>
-            </div>
-            <div className="job-card">
-              <div className="job-info">
-                <h3>Product designer</h3>
-                <p>Facebook | CA, USA</p>
-                <p>Facebook's mission is to give people the power to build community...</p>
-              </div>
-              <button className="more-button">MORE</button>
-            </div>
-            <div className="job-card">
-              <div className="job-info">
-                <h3>Part-time UX designer</h3>
-                <p>Google | International</p>
-                <p>Search the world's information, including webpages, images...</p>
-              </div>
-              <button className="more-button">MORE</button>
-            </div>
-            <div className="job-card">
-              <div className="job-info">
-                <h3>Web designer</h3>
-                <p>LinkedIn | CA, USA</p>
-                <p>LinkedIn, the world's largest professional network...</p>
-              </div>
-              <button className="more-button">MORE</button>
-            </div>
+      <section className="featured-jobs">
+        <h2>Featured Jobs</h2>
+        <div className="job-list">
+          <div className="job-card">
+            <h3>Software Developer</h3>
+            <p>XYZ Tech Company</p>
+            <button>Apply Now</button>
           </div>
-
-          <div className="jobs-section">
-            <h2>NEW JOBS</h2>
-            <div className="job-card">
-              <div className="job-info">
-                <h3>UI designer</h3>
-                <p>Instagram | CA, USA</p>
-                <p>Instagram is a photo and video-sharing social networking service...</p>
-              </div>
-              <button className="more-button">MORE</button>
-            </div>
-            <div className="job-card">
-              <div className="job-info">
-                <h3>Product designer</h3>
-                <p>Google | International</p>
-                <p>Search the world's information, including webpages, images...</p>
-              </div>
-              <button className="more-button">MORE</button>
-            </div>
+          <div className="job-card">
+            <h3>Marketing Specialist</h3>
+            <p>ABC Marketing</p>
+            <button>Apply Now</button>
           </div>
+          {/* Add more job cards as needed */}
         </div>
-      </main>      
+      </section>
+
+      <section className="featured-employers">
+        <h2>Featured Employers</h2>
+        <div className="employer-list">
+          <div className="employer-card">
+            <h3>XYZ Tech Company</h3>
+            <p>Innovative tech solutions.</p>
+          </div>
+          <div className="employer-card">
+            <h3>ABC Marketing</h3>
+            <p>Creative marketing strategies.</p>
+          </div>
+          {/* Add more employer cards as needed */}
+        </div>
+      </section>
+
+      <footer className="footer">
+        <p>© 2024 Local Job Board. All rights reserved.</p>
+      </footer>
     </div>
   );
-}
+};
 
 export default HomePage;
