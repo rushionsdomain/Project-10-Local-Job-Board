@@ -1,0 +1,9 @@
+.title {
+    font-size: 36px; /* increase font size to make it more prominent */
+    font-weight: bold; /* make the text bold to give it more emphasis */
+    color: #333; /* dark gray text color */
+    text-align: center; /* center the text horizontally */
+    margin-bottom: 20px; /* add some space between the title and the rest of the content */
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2); /* add a subtle shadow to give it some depth */
+    letter-spacing: 1px; /* add some space between letters to make it more readable */
+  }
