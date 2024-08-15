@@ -1,12 +1,11 @@
-
-import './App.css';
-import HomePage from './components/HomePage';
-import Footer from './components/Footer'
-import SignInForm from './components/SignInForm';
-import RegisterForm from './components/RegisterForm';
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import logo from './logo.svg';
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import SignUp from "./components/RegisterForm";
+import Login from "./components/SignInForm";
+import Home from "./components/HomePage";
+import JobList from "./components/JobList";
+import JobDetails from "./components/JobDetails";
+import Profile from "./components/Profile";
 
 function App() {
   return (
