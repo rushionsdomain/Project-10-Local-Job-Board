@@ -9,15 +9,11 @@ function Footer() {
     };
 
     return (
-        <footer>
-            <div className="footer-content">
-                <div className="footer-header">
-                    <h4>Navigation</h4>
-                    <h4>Fast Access</h4> 
-                    <h4>Language</h4>
-                </div>
+        <>
+        <footer>               
                 <div className="footer-navigation">
                     <div className="footer-section">
+                    <h4>Navigation</h4>
                         <ul>
                             <li>About</li>
                             <li>Careers</li>
@@ -26,6 +22,7 @@ function Footer() {
                         </ul>
                     </div>
                     <div className="footer-section">
+                    <h4>Fast Access</h4> 
                         <ul>
                             <li>Talent Solutions</li>
                             <li>Marketing Solutions</li>
@@ -34,6 +31,7 @@ function Footer() {
                         </ul>
                     </div>
                     <div className="footer-section">
+                    <h4>Extras</h4>
                         <ul>
                             <li>Community Guidelines</li>
                             <li>Privacy & Terms</li>
@@ -45,10 +43,10 @@ function Footer() {
                     <button className="footer-button">QUESTIONS?</button>
                     <button className="footer-button">SETTINGS</button>
                 </div>
-            </div>
             <div className="footer-bottom">
                 <p>&copy; 2024 Net-Work. All Rights Reserved.</p>
                 <div className="language-dropdown">
+                <h4>Language</h4>
                     <select value={selectedLanguage} onChange={handleLanguageChange}>
                         <option value="en">English</option>
                         <option value="es">Español</option>
@@ -59,6 +57,7 @@ function Footer() {
                 </div>
             </div>
         </footer>
+    </>
     );
 }
 
