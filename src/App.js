@@ -20,8 +20,8 @@ const isAuthenticated = () => {
 };
 
 // Protected route component
-const PrivateRoute = ({ element: Component }) => {
-  return isAuthenticated() ? Component : <Navigate to="/login" />;
+const PrivateRoute = ({ element }) => {
+  return isAuthenticated() ? element : <Navigate to="/login" />;
 };
 
 function App() {
