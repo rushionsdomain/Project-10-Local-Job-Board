@@ -1,7 +1,7 @@
 // App.js
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import SignUp from "./components/RegisterForm";
+import RegisterForm from "./components/RegisterForm";
 import Login from "./components/SignInForm";
 import Home from "./components/HomePage";
 import JobList from "./components/JobList";
@@ -14,7 +14,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Landing />} />
-        <Route path="/signup" element={<SignUp />} />
+        <Route path="/signup" element={<RegisterForm />} />
         <Route path="/login" element={<Login />} />
         <Route path="/home" element={<Home />} />
         <Route path="/jobs" element={<JobList />} />

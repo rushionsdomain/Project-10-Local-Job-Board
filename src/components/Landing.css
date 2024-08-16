@@ -63,3 +63,8 @@
   background-color: white;
   color: #666;
 }
+
+nav {
+  display: grid;
+  gap: 20px;
+}

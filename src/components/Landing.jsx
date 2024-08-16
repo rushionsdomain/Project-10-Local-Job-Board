@@ -2,17 +2,24 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Landing.css";
 import logo from "../assets/network.jpeg";
+import animationData from "../assets/work.json"; // Add the JSON animation file
+import Lottie from "lottie-react"; // Import Lottie React
 
 function LandingPage() {
   return (
     <div className="landing-container">
       <header className="landing-header">
-        <img src={logo} alt="Net-Work Logo" className="landing-logo" />
+        <img
+          src={logo}
+          alt="Net-Work Logo"
+          className="landing-logo"
+          onClick={() => window.location.reload()}
+        />
         <nav>
-          <Link to="/signin" className="landing-link">
+          <Link to="/login" className="landing-cta-button">
             Sign In
           </Link>
-          <Link to="/signup" className="landing-link">
+          <Link to="/signup" className="landing-cta-button">
             Sign Up
           </Link>
         </nav>
@@ -30,13 +37,13 @@ function LandingPage() {
             Get Started
           </Link>
         </div>
-        {/* <div className="landing-image">
-          <img src={landingImage} alt="Job connections" />
-        </div> */}
+        <div className="landing-image">
+          <Lottie animationData={animationData} style={{ height: 300 }} />
+        </div>
       </div>
 
       <footer className="landing-footer">
-        <p>© 2024 Net-Work | Your Local Job Board Platform</p>
+        <p>© 2024 Net-Work</p>
       </footer>
     </div>
   );
