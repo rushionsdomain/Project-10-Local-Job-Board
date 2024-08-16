@@ -1,49 +1,65 @@
-/* Landing.css */
 .landing-container {
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #f3f2ef; /* LinkedIn background color */
+  justify-content: space-between;
+  background-color: #f3f2ef;
+  font-family: Arial, sans-serif;
 }
 
 .landing-header {
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: white;
 }
 
-.landing-header h1 {
-  font-size: 48px;
-  color: #0073b1; /* LinkedIn primary color */
+.landing-logo {
+  width: 150px;
 }
 
-.landing-header p {
-  font-size: 20px;
+.landing-link {
+  margin-left: 20px;
+  color: #0073b1;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.landing-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+}
+
+.landing-text h1 {
+  font-size: 2.5em;
+  color: #333;
+}
+
+.landing-text p {
+  font-size: 1.2em;
   color: #666;
 }
 
-.auth-buttons {
+.landing-cta-button {
+  display: inline-block;
   margin-top: 20px;
-}
-
-.auth-buttons .btn-login,
-.auth-buttons .btn-signup {
-  padding: 12px 24px;
-  margin: 0 10px;
-  font-size: 16px;
-  color: white;
+  padding: 15px 30px;
   background-color: #0073b1;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  color: white;
   text-decoration: none;
+  border-radius: 5px;
 }
 
-.auth-buttons .btn-signup {
-  background-color: #0a66c2;
+.landing-image img {
+  width: 500px;
+  height: auto;
 }
 
-.auth-buttons .btn-login:hover,
-.auth-buttons .btn-signup:hover {
-  opacity: 0.9;
+.landing-footer {
+  padding: 20px;
+  text-align: center;
+  background-color: white;
+  color: #666;
 }

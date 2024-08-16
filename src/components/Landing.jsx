@@ -1,25 +1,45 @@
-// Landing.jsx
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Landing.css";
+import logo from "../assets/network.jpeg";
 
-const Landing = () => {
+function LandingPage() {
   return (
     <div className="landing-container">
       <header className="landing-header">
-        <h1>Welcome to Net-Work</h1>
-        <p>Your local platform to connect businesses and job seekers</p>
-        <div className="auth-buttons">
-          <Link to="/login" className="btn-login">
+        <img src={logo} alt="Net-Work Logo" className="landing-logo" />
+        <nav>
+          <Link to="/signin" className="landing-link">
             Sign In
           </Link>
-          <Link to="/signup" className="btn-signup">
-            Join Now
+          <Link to="/signup" className="landing-link">
+            Sign Up
+          </Link>
+        </nav>
+      </header>
+
+      <div className="landing-content">
+        <div className="landing-text">
+          <h1>Connect with Local Jobs and Employers</h1>
+          <p>
+            Find your next opportunity or the perfect candidate within your
+            community. Join Net-Work today and simplify your hiring or job
+            search experience.
+          </p>
+          <Link to="/signup" className="landing-cta-button">
+            Get Started
           </Link>
         </div>
-      </header>
+        {/* <div className="landing-image">
+          <img src={landingImage} alt="Job connections" />
+        </div> */}
+      </div>
+
+      <footer className="landing-footer">
+        <p>© 2024 Net-Work | Your Local Job Board Platform</p>
+      </footer>
     </div>
   );
-};
+}
 
-export default Landing;
+export default LandingPage;

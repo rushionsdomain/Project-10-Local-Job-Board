@@ -1,58 +1,76 @@
-// RegisterForm.jsx
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./RegisterForm.css";
+import signupImage from "../assets/lock.jpg"; // Import an image for the left side
 
-const RegisterForm = () => {
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    password: "",
-  });
-
-  const handleChange = (e) => {
-    setForm({
-      ...form,
-      [e.target.name]: e.target.value,
-    });
-  };
+function SignUpForm() {
+  const [role, setRole] = useState("job-seeker"); // default role
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // handle registration logic
+    if (role === "job-seeker") {
+      navigate("/jobseeker-dashboard");
+    } else if (role === "employer") {
+      navigate("/employer-dashboard");
+    } else if (role === "superuser") {
+      navigate("/superuser-dashboard");
+    }
   };
 
   return (
     <div className="register-container">
-      <form className="register-form" onSubmit={handleSubmit}>
-        <h2>Join Net-Work</h2>
-        <input
-          type="text"
-          name="name"
-          placeholder="Name"
-          value={form.name}
-          onChange={handleChange}
-          required
-        />
-        <input
-          type="email"
-          name="email"
-          placeholder="Email"
-          value={form.email}
-          onChange={handleChange}
-          required
-        />
-        <input
-          type="password"
-          name="password"
-          placeholder="Password"
-          value={form.password}
-          onChange={handleChange}
-          required
-        />
-        <button type="submit">Join</button>
-      </form>
+      <div className="register-left">
+        <img src={signupImage} alt="Sign Up" className="register-image" />
+      </div>
+
+      <div className="register-right">
+        <h2>Create Your Account</h2>
+        <form onSubmit={handleSubmit}>
+          <input type="text" placeholder="Full Name" required />
+          <input type="email" placeholder="Email" required />
+          <input type="password" placeholder="Password" required />
+
+          <div className="role-selection">
+            <label>
+              <input
+                type="radio"
+                name="role"
+                value="job-seeker"
+                checked={role === "job-seeker"}
+                onChange={() => setRole("job-seeker")}
+              />
+              Job Seeker
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="role"
+                value="employer"
+                checked={role === "employer"}
+                onChange={() => setRole("employer")}
+              />
+              Employer
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="role"
+                value="superuser"
+                checked={role === "superuser"}
+                onChange={() => setRole("superuser")}
+              />
+              Superuser
+            </label>
+          </div>
+
+          <button type="submit" className="signup-button">
+            Sign Up
+          </button>
+        </form>
+      </div>
     </div>
   );
-};
+}
 
-export default RegisterForm;
+export default SignUpForm;
