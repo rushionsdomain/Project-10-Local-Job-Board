@@ -11,7 +11,9 @@ import Login from "./components/SignInForm";
 import JobList from "./components/JobList";
 import JobDetails from "./components/JobDetails";
 import Profile from "./components/Profile";
-import Home from "./components/HomePage";
+import JobSeekerDashboard from "./components/JobSeekerDashboard";
+import EmployerDashboard from "./components/EmployerDashboard";
+import SuperuserDashboard from "./components/SuperuserDashboard";
 
 // Simulated authentication check (this should come from your actual auth logic)
 const isAuthenticated = () => {
@@ -19,9 +21,27 @@ const isAuthenticated = () => {
   return localStorage.getItem("authToken") ? true : false;
 };
 
-// Protected route component
+// Get user role from local storage (assuming it's set during login)
+const getUserRole = () => {
+  return localStorage.getItem("userRole");
+};
+
+// Protected route component with role-based redirection
 const PrivateRoute = ({ element }) => {
   return isAuthenticated() ? element : <Navigate to="/login" />;
+};
+
+// Route component with role-based redirection
+const RoleBasedRoute = ({ role, element }) => {
+  const userRole = getUserRole();
+
+  if (userRole === role) {
+    return <PrivateRoute element={element} />;
+  } else if (isAuthenticated()) {
+    return <Navigate to="/home" />;
+  } else {
+    return <Navigate to="/login" />;
+  }
 };
 
 function App() {
@@ -35,7 +55,38 @@ function App() {
           <Route path="/login" element={<Login />} />
 
           {/* Protected Routes */}
-          <Route path="/home" element={<PrivateRoute element={<Home />} />} />
+          <Route
+            path="/home"
+            element={
+              <PrivateRoute
+                element={<Navigate to={`/${getUserRole()}-dashboard`} />}
+              />
+            }
+          />
+          <Route
+            path="/job-seeker-dashboard"
+            element={
+              <RoleBasedRoute
+                role="job-seeker"
+                element={<JobSeekerDashboard />}
+              />
+            }
+          />
+          <Route
+            path="/employer-dashboard"
+            element={
+              <RoleBasedRoute role="employer" element={<EmployerDashboard />} />
+            }
+          />
+          <Route
+            path="/superuser-dashboard"
+            element={
+              <RoleBasedRoute
+                role="superuser"
+                element={<SuperuserDashboard />}
+              />
+            }
+          />
           <Route
             path="/jobs"
             element={<PrivateRoute element={<JobList />} />}
