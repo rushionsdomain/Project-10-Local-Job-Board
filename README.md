@@ -1,70 +1,97 @@
-# Getting Started with Create React App
+# Net-Work: Local Job Board
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Net-Work is a local job board application designed to connect local businesses and employers with job seekers within the community. The platform includes features for job postings, job applications, and user profiles for both employers and job seekers. Additionally, superusers have administrative capabilities for managing the site.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Landing Page**: Engaging introduction with animations and CTA buttons.
+- **Authentication**: User registration and login with role-based access.
+- **Role-Based Dashboards**:
+  - **Job Seeker Dashboard**: Manage profiles, search for jobs, apply for positions, and prepare for interviews.
+  - **Employer Dashboard**: Post jobs, manage job applications, schedule interviews, and view analytics.
+  - **Superuser Dashboard**: Administer users, manage site content, view site analytics, and handle security settings.
+- **Job Listings**: View and filter job opportunities.
+- **Messaging**: Communicate between job seekers and employers.
+- **Notifications**: Receive updates on job applications and messages.
 
-### `npm start`
+## Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. **Clone the repository:**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+    ```bash
+    git clone https://github.com/rushionsdoamin/net-work.git
+    ```
 
-### `npm test`
+2. **Navigate into the project directory:**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    ```bash
+    cd net-work
+    ```
 
-### `npm run build`
+3. **Install dependencies:**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    ```bash
+    npm install
+    ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. **Start the development server:**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    ```bash
+    npm start
+    ```
 
-### `npm run eject`
+    The application will be available at `http://localhost:3000`.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Usage
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. **Register and Login:**
+   - Visit the landing page to register as a new user or log in if you already have an account.
+   - Users can register as Job Seekers, Employers, or Superusers. Based on the user role, they will be redirected to their respective dashboards upon logging in.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. **Navigating the Application:**
+   - **Job Seekers**: Use the navigation bar to access the Home, Messaging, Jobs, Notifications, and Profile sections.
+   - **Employers**: Use the navigation bar to access the Home, Messaging, Post Jobs, Notifications, and Profile sections.
+   - **Superusers**: Use the navigation bar to access the Home, Messaging, Administration of Users, Notifications, and Profile sections.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+3. **Adding Jobs:**
+   - Employers can post new jobs using the "Post Jobs" section.
 
-## Learn More
+4. **Applying for Jobs:**
+   - Job Seekers can browse job listings and apply for positions directly from their dashboard.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Authentication & Role Management
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The application uses local storage to manage authentication tokens and user roles. The `authToken` and `userRole` are stored in local storage upon login. Ensure you have these tokens properly set to simulate different user roles.
 
-### Code Splitting
+## Technology Stack
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- **Frontend**: React, React Router, CSS
+- **Backend**: JSON Server (for mock data and API simulation)
 
-### Analyzing the Bundle Size
+## Project Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- `src/`
+  - `components/`
+    - `AddJobForm.jsx` - Form for employers to add new job listings.
+    - `ApplicationForm.jsx` - Form for job seekers to apply for jobs.
+    - `Navbar.jsx` - Navigation bar component for different user roles.
+    - `JobList.jsx` - Component to display a list of job opportunities.
+    - `JobDetails.jsx` - Component to show detailed information about a specific job.
+    - `Profile.jsx` - User profile management component.
+    - `HomePage.jsx` - Home page component with role-based content.
+    - `JobSeekerDashboard.jsx` - Dashboard for job seekers.
+    - `EmployerDashboard.jsx` - Dashboard for employers.
+    - `SuperuserDashboard.jsx` - Dashboard for superusers.
+    - `Landing.jsx` - Landing page component.
+    - `RegisterForm.jsx` - Registration form component.
+    - `SignInForm.jsx` - Login form component.
+  - `App.js` - Main application routing and logic.
+  - `db.json` - Mock database for users and job listings.
 
-### Making a Progressive Web App
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Feel free to fork the repository and submit pull requests. Contributions and feedback are welcome!
 
-### Advanced Configuration
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
