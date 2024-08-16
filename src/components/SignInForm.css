@@ -1,9 +1,7 @@
+/* SignInForm.css */
 .signin-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
   height: 100vh;
-  background-color: #f3f2ef;
 }
 
 .signin-left {
@@ -13,22 +11,18 @@
   justify-content: center;
 }
 
-.signin-image {
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 10px;
-}
-
 .signin-right {
   flex: 1;
-  background-color: white;
-  padding: 40px;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  margin-left: 20px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
+  padding: 20px;
+}
+
+.signin-image {
+  width: 100%;
+  height: auto;
 }
 
 .signin-right h2 {
@@ -36,11 +30,16 @@
   color: #0073b1;
 }
 
+.signin-right form {
+  width: 100%;
+  max-width: 400px;
+}
+
 .signin-right input {
   width: 100%;
   padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
   border-radius: 5px;
 }
 
@@ -55,45 +54,5 @@
 }
 
 .signin-button:hover {
-  background-color: #005f90;
-}
-
-.role-selection {
-  margin-bottom: 20px;
-}
-
-.role-selection label {
-  display: inline-block;
-  margin-right: 10px;
-  font-weight: bold;
-}
-
-.role-selection input {
-  margin-right: 5px;
-}
-
-.job-seeker-role {
-  color: #0073b1;
-}
-
-.employer-role {
-  color: #ff9800;
-}
-
-.superuser-role {
-  color: #e91e63;
-}
-
-.signin-footer {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.signin-footer a {
-  color: #0073b1;
-  text-decoration: none;
-}
-
-.signin-footer a:hover {
-  text-decoration: underline;
+  background-color: #005a8e;
 }

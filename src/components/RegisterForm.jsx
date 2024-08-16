@@ -1,36 +1,53 @@
+// RegisterForm.jsx
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { register } from "./authService"; // Import authentication service
 import "./RegisterForm.css";
-import signupImage from "../assets/lock.jpg"; // Import an image for the left side
 
-function SignUpForm() {
-  const [role, setRole] = useState("job-seeker"); // default role
+function RegisterForm() {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [role, setRole] = useState("job-seeker");
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (role === "job-seeker") {
-      navigate("/jobseeker-dashboard");
-    } else if (role === "employer") {
-      navigate("/employer-dashboard");
+    try {
+      await register(username, password, role);
+      navigate("/login");
+    } catch (error) {
+      alert("Registration failed");
     }
   };
 
   return (
     <div className="register-container">
       <div className="register-left">
-        <img src={signupImage} alt="Sign Up" className="register-image" />
+        <img
+          src="/path/to/signup-image.jpg" // Update with the actual image path
+          alt="Sign Up"
+          className="register-image"
+        />
       </div>
-
       <div className="register-right">
         <h2>Create Your Account</h2>
         <form onSubmit={handleSubmit}>
-          <input type="text" placeholder="Full Name" required />
-          <input type="email" placeholder="Email" required />
-          <input type="password" placeholder="Password" required />
-
+          <input
+            type="text"
+            placeholder="Username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
           <div className="role-selection">
-            <label className="job-seeker-role">
+            <label>
               <input
                 type="radio"
                 name="role"
@@ -40,7 +57,7 @@ function SignUpForm() {
               />
               Job Seeker
             </label>
-            <label className="employer-role">
+            <label>
               <input
                 type="radio"
                 name="role"
@@ -50,19 +67,24 @@ function SignUpForm() {
               />
               Employer
             </label>
+            <label>
+              <input
+                type="radio"
+                name="role"
+                value="superuser"
+                checked={role === "superuser"}
+                onChange={() => setRole("superuser")}
+              />
+              Superuser
+            </label>
           </div>
-
           <button type="submit" className="signup-button">
             Sign Up
           </button>
         </form>
-
-        <div className="register-footer">
-          Already have an account? <a href="/login">Sign In</a>
-        </div>
       </div>
     </div>
   );
 }
 
-export default SignUpForm;
+export default RegisterForm;
