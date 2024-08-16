@@ -46,7 +46,8 @@
   }
   
   .RegisterForm button:hover {
-    background-color: #0056b3;
+    background-color: blue;
+    opacity: 0.8;
   }
   
   .RegisterForm p {
@@ -57,7 +58,7 @@
   
   .register-btn {
     border: none;
-    background-color: #28a745;
+    background-color: orange;
     color: white;
     font-size: 16px;
     cursor: pointer;
@@ -70,7 +71,7 @@
 
   .register-btn:hover{
     transition: 0.5s ease;
-    background-color: red;
-    color: blue;
+    background-color: blue;
+    color: white;
     opacity: 0.8;
   }

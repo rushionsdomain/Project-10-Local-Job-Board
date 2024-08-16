@@ -20,8 +20,8 @@ function HomePage() {
             <li><a href="#">Resources</a></li>
           </ul>
           <div className="auth-buttons">
-            <button className="sign-in-btn">Sign In</button>
             <button className="register-btn">Register</button>
+            <button className="sign-in-btn">Sign In</button>     
           </div>
         </nav>
       </header>
