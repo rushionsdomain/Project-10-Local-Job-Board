@@ -13,8 +13,6 @@ function SignUpForm() {
       navigate("/jobseeker-dashboard");
     } else if (role === "employer") {
       navigate("/employer-dashboard");
-    } else if (role === "superuser") {
-      navigate("/superuser-dashboard");
     }
   };
 
@@ -32,7 +30,7 @@ function SignUpForm() {
           <input type="password" placeholder="Password" required />
 
           <div className="role-selection">
-            <label>
+            <label className="job-seeker-role">
               <input
                 type="radio"
                 name="role"
@@ -42,7 +40,7 @@ function SignUpForm() {
               />
               Job Seeker
             </label>
-            <label>
+            <label className="employer-role">
               <input
                 type="radio"
                 name="role"
@@ -52,22 +50,16 @@ function SignUpForm() {
               />
               Employer
             </label>
-            <label>
-              <input
-                type="radio"
-                name="role"
-                value="superuser"
-                checked={role === "superuser"}
-                onChange={() => setRole("superuser")}
-              />
-              Superuser
-            </label>
           </div>
 
           <button type="submit" className="signup-button">
             Sign Up
           </button>
         </form>
+
+        <div className="register-footer">
+          Already have an account? <a href="/login">Sign In</a>
+        </div>
       </div>
     </div>
   );

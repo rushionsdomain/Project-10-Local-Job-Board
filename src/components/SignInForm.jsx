@@ -31,7 +31,7 @@ function SignInForm() {
           <input type="password" placeholder="Password" required />
 
           <div className="role-selection">
-            <label>
+            <label className="job-seeker-role">
               <input
                 type="radio"
                 name="role"
@@ -41,7 +41,7 @@ function SignInForm() {
               />
               Job Seeker
             </label>
-            <label>
+            <label className="employer-role">
               <input
                 type="radio"
                 name="role"
@@ -51,7 +51,7 @@ function SignInForm() {
               />
               Employer
             </label>
-            <label>
+            <label className="superuser-role">
               <input
                 type="radio"
                 name="role"
@@ -67,6 +67,10 @@ function SignInForm() {
             Sign In
           </button>
         </form>
+
+        <div className="signin-footer">
+          Don't have an account? <a href="/signup">Sign Up</a>
+        </div>
       </div>
     </div>
   );

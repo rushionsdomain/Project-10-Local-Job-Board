@@ -1,20 +1,22 @@
 .signin-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   height: 100vh;
   background-color: #f3f2ef;
-  padding: 20px;
 }
 
 .signin-left {
   flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .signin-image {
-  width: 100%;
-  max-height: 100%;
-  object-fit: cover;
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
 }
 
 .signin-right {
@@ -24,6 +26,9 @@
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .signin-right h2 {
@@ -55,4 +60,40 @@
 
 .role-selection {
   margin-bottom: 20px;
+}
+
+.role-selection label {
+  display: inline-block;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.role-selection input {
+  margin-right: 5px;
+}
+
+.job-seeker-role {
+  color: #0073b1;
+}
+
+.employer-role {
+  color: #ff9800;
+}
+
+.superuser-role {
+  color: #e91e63;
+}
+
+.signin-footer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.signin-footer a {
+  color: #0073b1;
+  text-decoration: none;
+}
+
+.signin-footer a:hover {
+  text-decoration: underline;
 }
