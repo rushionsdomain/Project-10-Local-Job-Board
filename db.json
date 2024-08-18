@@ -2,39 +2,137 @@
   "users": [
     {
       "id": 1,
-      "username": "jobseeker1",
-      "password": "password123",
-      "role": "job-seeker"
+      "email": "employer1@example.com",
+      "password": "password",
+      "role": "employer"
     },
     {
       "id": 2,
-      "username": "jobseeker2",
-      "password": "password123",
-      "role": "job-seeker"
+      "email": "employer2@example.com",
+      "password": "password",
+      "role": "employer"
     },
     {
       "id": 3,
-      "username": "employer1",
-      "password": "password123",
-      "role": "employer"
+      "email": "jobseeker1@example.com",
+      "password": "password",
+      "role": "jobseeker"
     },
     {
       "id": 4,
-      "username": "employer2",
-      "password": "password123",
-      "role": "employer"
+      "email": "jobseeker2@example.com",
+      "password": "password",
+      "role": "jobseeker"
     },
     {
       "id": 5,
-      "username": "superuser1",
-      "password": "password123",
-      "role": "superuser"
+      "email": "jobseeker3@example.com",
+      "password": "password",
+      "role": "jobseeker"
     },
     {
       "id": 6,
-      "username": "superuser2",
-      "password": "password123",
-      "role": "superuser"
+      "email": "jobseeker4@example.com",
+      "password": "password",
+      "role": "jobseeker"
+    },
+    {
+      "id": 7,
+      "email": "jobseeker5@example.com",
+      "password": "password",
+      "role": "jobseeker"
+    },
+    {
+      "id": 8,
+      "email": "employer3@example.com",
+      "password": "password",
+      "role": "employer"
+    },
+    {
+      "id": 9,
+      "email": "employer4@example.com",
+      "password": "password",
+      "role": "employer"
+    },
+    {
+      "id": 10,
+      "email": "jobseeker6@example.com",
+      "password": "password",
+      "role": "jobseeker"
     }
+  ],
+  "jobs": [
+    {
+      "id": 1,
+      "title": "Software Engineer",
+      "description": "Develop and maintain web applications.",
+      "employerId": 1
+    },
+    {
+      "id": 2,
+      "title": "Product Manager",
+      "description": "Lead product development teams.",
+      "employerId": 2
+    },
+    {
+      "id": 3,
+      "title": "UX Designer",
+      "description": "Design user interfaces for mobile apps.",
+      "employerId": 1
+    },
+    {
+      "id": 4,
+      "title": "Data Scientist",
+      "description": "Analyze large data sets.",
+      "employerId": 2
+    },
+    {
+      "id": 5,
+      "title": "Marketing Specialist",
+      "description": "Create and manage marketing campaigns.",
+      "employerId": 3
+    },
+    {
+      "id": 6,
+      "title": "Sales Manager",
+      "description": "Manage sales teams.",
+      "employerId": 4
+    },
+    {
+      "id": 7,
+      "title": "DevOps Engineer",
+      "description": "Maintain CI/CD pipelines.",
+      "employerId": 3
+    },
+    {
+      "id": 8,
+      "title": "Customer Support",
+      "description": "Assist customers with inquiries.",
+      "employerId": 4
+    },
+    {
+      "id": 9,
+      "title": "HR Specialist",
+      "description": "Handle recruitment processes.",
+      "employerId": 1
+    },
+    {
+      "id": 10,
+      "title": "Business Analyst",
+      "description": "Analyze business processes.",
+      "employerId": 2
+    }
+  ],
+  "applications": [
+    { "id": 1, "jobId": 1, "jobseekerId": 3, "status": "pending" },
+    { "id": 2, "jobId": 2, "jobseekerId": 4, "status": "pending" },
+    { "id": 3, "jobId": 3, "jobseekerId": 5, "status": "pending" },
+    { "id": 4, "jobId": 4, "jobseekerId": 6, "status": "pending" },
+    { "id": 5, "jobId": 5, "jobseekerId": 7, "status": "pending" },
+    { "id": 6, "jobId": 6, "jobseekerId": 10, "status": "pending" },
+    { "id": 7, "jobId": 7, "jobseekerId": 3, "status": "pending" },
+    { "id": 8, "jobId": 8, "jobseekerId": 4, "status": "pending" },
+    { "id": 9, "jobId": 9, "jobseekerId": 5, "status": "pending" },
+    { "id": 10, "jobId": 10, "jobseekerId": 6, "status": "pending" }
   ]
 }

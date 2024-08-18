@@ -1,42 +1,25 @@
+// EmployerDashboard.js
 import React from "react";
-import Navbar from "./Navbar";
-import "./EmployerDashboard.css";
+import "./Dashboard.css"; // For styling
 
-const EmployerDashboard = () => {
+function EmployerDashboard() {
   return (
-    <div className="dashboard-container">
-      <Navbar role="employer" />
+    <div className="dashboard">
+      <h1>Employer Dashboard</h1>
       <div className="dashboard-content">
-        <h2>Welcome, Employer!</h2>
-        <div className="dashboard-sections">
-          <section>
-            <h3>Profile Management</h3>
-            <p>Edit company details and manage locations.</p>
-          </section>
-          <section>
-            <h3>Job Posting Management</h3>
-            <p>Create and manage job postings.</p>
-          </section>
-          <section>
-            <h3>Application Review</h3>
-            <p>Review and shortlist job applications.</p>
-          </section>
-          <section>
-            <h3>Interview Scheduling</h3>
-            <p>Schedule interviews and manage timelines.</p>
-          </section>
-          <section>
-            <h3>Talent Pool Management</h3>
-            <p>Manage potential candidates for future roles.</p>
-          </section>
-          <section>
-            <h3>Analytics and Reports</h3>
-            <p>View insights and generate recruitment reports.</p>
-          </section>
+        <div className="dashboard-card">
+          <h2>Job Posting Management</h2>
+          <p>Post new job openings and manage existing ones.</p>
+          <button className="dashboard-button">Manage Job Postings</button>
+        </div>
+        <div className="dashboard-card">
+          <h2>Application Review</h2>
+          <p>Review and manage applications from potential candidates.</p>
+          <button className="dashboard-button">Review Applications</button>
         </div>
       </div>
     </div>
   );
-};
+}
 
 export default EmployerDashboard;

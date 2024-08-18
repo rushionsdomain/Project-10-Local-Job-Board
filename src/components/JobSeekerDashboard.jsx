@@ -1,42 +1,25 @@
+// JobSeekerDashboard.js
 import React from "react";
-import Navbar from "./Navbar";
-import "./JobSeekerDashboard.css";
+import "./Dashboard.css"; // For styling
 
-const JobSeekerDashboard = () => {
+function JobSeekerDashboard() {
   return (
-    <div className="dashboard-container">
-      <Navbar role="job-seeker" />
+    <div className="dashboard">
+      <h1>Job Seeker Dashboard</h1>
       <div className="dashboard-content">
-        <h2>Welcome, Job Seeker!</h2>
-        <div className="dashboard-sections">
-          <section>
-            <h3>Profile Management</h3>
-            <p>Edit your profile, resume, and cover letters.</p>
-          </section>
-          <section>
-            <h3>Job Search</h3>
-            <p>Browse job listings and set alerts for new openings.</p>
-          </section>
-          <section>
-            <h3>Application Management</h3>
-            <p>Track your job applications and manage interviews.</p>
-          </section>
-          <section>
-            <h3>Networking</h3>
-            <p>Connect with employers and join professional groups.</p>
-          </section>
-          <section>
-            <h3>Interview Preparation</h3>
-            <p>Access interview tips and schedule mock sessions.</p>
-          </section>
-          <section>
-            <h3>Job Suggestions</h3>
-            <p>Get personalized job recommendations.</p>
-          </section>
+        <div className="dashboard-card">
+          <h2>Profile Management</h2>
+          <p>Manage your profile and update your personal details.</p>
+          <button className="dashboard-button">Go to Profile</button>
+        </div>
+        <div className="dashboard-card">
+          <h2>Job Search</h2>
+          <p>Search for jobs that match your skills and experience.</p>
+          <button className="dashboard-button">Search Jobs</button>
         </div>
       </div>
     </div>
   );
-};
+}
 
 export default JobSeekerDashboard;

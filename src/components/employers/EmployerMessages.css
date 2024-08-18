@@ -1,0 +1,29 @@
+.messages-container {
+  padding: 20px;
+  background-color: #f7f7f7;
+}
+
+.message-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.message-card h3 {
+  color: #0073b1;
+  margin-bottom: 10px;
+}
+
+.message-card p {
+  color: #333;
+  margin: 5px 0;
+}
+
+.message-card span {
+  display: block;
+  margin-top: 10px;
+  color: #999;
+  font-size: 12px;
+}

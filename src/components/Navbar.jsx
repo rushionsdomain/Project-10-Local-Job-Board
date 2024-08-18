@@ -2,39 +2,46 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 
-const Navbar = ({ role }) => {
-  const navLinks = {
-    "job-seeker": [
-      { to: "/home", text: "Home" },
-      { to: "/messaging", text: "Messaging" },
-      { to: "/jobs", text: "Jobs" },
-      { to: "/notifications", text: "Notifications" },
-      { to: "/profile", text: "Profile" },
-    ],
-    employer: [
-      { to: "/home", text: "Home" },
-      { to: "/messaging", text: "Messaging" },
-      { to: "/post-jobs", text: "Post Jobs" },
-      { to: "/notifications", text: "Notifications" },
-      { to: "/profile", text: "Profile" },
-    ],
-    superuser: [
-      { to: "/home", text: "Home" },
-      { to: "/messaging", text: "Messaging" },
-      { to: "/administration", text: "Administration of Users" },
-      { to: "/notifications", text: "Notifications" },
-      { to: "/profile", text: "Profile" },
-    ],
-  };
-
+const Navbar = ({ userType }) => {
   return (
     <nav className="navbar">
-      <ul className="navbar-links">
-        {navLinks[role].map((link) => (
-          <li key={link.to}>
-            <Link to={link.to}>{link.text}</Link>
-          </li>
-        ))}
+      <h1>JobPortal</h1>
+      <ul>
+        {userType === "jobseeker" && (
+          <>
+            <li>
+              <Link to="/feed">Feed</Link>
+            </li>
+            <li>
+              <Link to="/messages">Messages</Link>
+            </li>
+            <li>
+              <Link to="/notifications">Notifications</Link>
+            </li>
+            <li>
+              <Link to="/profile">Profile</Link>
+            </li>
+          </>
+        )}
+        {userType === "employer" && (
+          <>
+            <li>
+              <Link to="/employer-feed">Feed</Link>
+            </li>
+            <li>
+              <Link to="/post-job">Post Job</Link>
+            </li>
+            <li>
+              <Link to="/messages">Messages</Link>
+            </li>
+            <li>
+              <Link to="/notifications">Notifications</Link>
+            </li>
+            <li>
+              <Link to="/employer-profile">Profile</Link>
+            </li>
+          </>
+        )}
       </ul>
     </nav>
   );

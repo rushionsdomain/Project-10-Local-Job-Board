@@ -1,42 +1,25 @@
+// SuperuserDashboard.js
 import React from "react";
-import Navbar from "./Navbar";
-import "./SuperuserDashboard.css";
+import "./Dashboard.css"; // For styling
 
-const SuperuserDashboard = () => {
+function SuperuserDashboard() {
   return (
-    <div className="dashboard-container">
-      <Navbar role="superuser" />
+    <div className="dashboard">
+      <h1>Superuser Dashboard</h1>
       <div className="dashboard-content">
-        <h2>Welcome, Superuser!</h2>
-        <div className="dashboard-sections">
-          <section>
-            <h3>Site Administration</h3>
-            <p>Manage user roles and approve registrations.</p>
-          </section>
-          <section>
-            <h3>Content Management</h3>
-            <p>Edit site-wide content and moderate forums.</p>
-          </section>
-          <section>
-            <h3>Site Analytics</h3>
-            <p>View site performance and user engagement metrics.</p>
-          </section>
-          <section>
-            <h3>Security and Compliance</h3>
-            <p>Monitor security logs and ensure compliance.</p>
-          </section>
-          <section>
-            <h3>Feedback and Support</h3>
-            <p>Review user feedback and respond to support tickets.</p>
-          </section>
-          <section>
-            <h3>Customization and Settings</h3>
-            <p>Adjust site settings and manage notifications.</p>
-          </section>
+        <div className="dashboard-card">
+          <h2>Site Administration</h2>
+          <p>Manage site settings and user roles.</p>
+          <button className="dashboard-button">Go to Administration</button>
+        </div>
+        <div className="dashboard-card">
+          <h2>Site Analytics</h2>
+          <p>View site analytics and performance metrics.</p>
+          <button className="dashboard-button">View Analytics</button>
         </div>
       </div>
     </div>
   );
-};
+}
 
 export default SuperuserDashboard;

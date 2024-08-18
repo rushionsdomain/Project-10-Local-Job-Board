@@ -1,0 +1,31 @@
+.profile {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.profile-info {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.profile-info h3 {
+  color: #0073b1;
+}
+
+.profile-info p {
+  margin: 10px 0;
+  color: #333;
+}
+
+.profile-actions button {
+  padding: 10px;
+  background-color: #0073b1;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}

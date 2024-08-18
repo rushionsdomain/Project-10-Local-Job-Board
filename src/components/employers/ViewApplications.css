@@ -1,0 +1,37 @@
+.applications-container {
+  padding: 20px;
+  background-color: #f7f7f7;
+}
+
+.application-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.application-card h3 {
+  color: #0073b1;
+  margin-bottom: 10px;
+}
+
+.application-card p {
+  margin: 5px 0;
+  color: #333;
+}
+
+.applicant-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.applicant-details button {
+  padding: 8px 16px;
+  background-color: #0073b1;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
