@@ -17,6 +17,9 @@ const JobListing = () => {
         <div key={job.id} className="job-card">
           <h3>{job.title}</h3>
           <p>{job.description}</p>
+          <a href={`/apply/${job.id}`} className="apply-button">
+            Apply
+          </a>
         </div>
       ))}
     </div>

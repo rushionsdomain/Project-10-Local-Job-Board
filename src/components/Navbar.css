@@ -1,32 +1,42 @@
+/* JobSeekerDashboard.css */
+.job-seeker-dashboard {
+  padding: 20px;
+}
+
+.job-seeker-dashboard section {
+  margin-bottom: 20px;
+}
+
+/* EmployerDashboard.css */
+.employer-dashboard {
+  padding: 20px;
+}
+
+.employer-dashboard section {
+  margin-bottom: 20px;
+}
+
+/* SuperuserDashboard.css */
+.superuser-dashboard {
+  padding: 20px;
+}
+
+.superuser-dashboard section {
+  margin-bottom: 20px;
+}
+
+/* Navbar.css */
 .navbar {
-  background-color: #0073b1;
-  color: white;
-  padding: 10px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  background-color: #333;
+  padding: 10px;
 }
 
-.navbar h1 {
-  font-size: 1.5rem;
-}
-
-.navbar ul {
-  list-style: none;
-  display: flex;
-  gap: 15px;
-}
-
-.navbar ul li {
-  display: inline;
-}
-
-.navbar ul li a {
+.navbar a {
   color: white;
   text-decoration: none;
-  font-weight: bold;
+  margin: 0 15px;
 }
 
-.navbar ul li a:hover {
+.navbar a:hover {
   text-decoration: underline;
 }

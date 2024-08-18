@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Notifications.css";
 
 const Notifications = () => {
-  const [notifications] = useState([
+  const notifications = [
     { id: 1, content: "Job application status updated: Interview" },
     { id: 2, content: "New job listing available: Frontend Developer" },
-  ]);
+  ];
 
   return (
     <div className="notifications">

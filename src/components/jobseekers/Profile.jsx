@@ -1,17 +1,34 @@
-import React from 'react';
-import './Profile.css';
+import React, { useState } from "react";
+import "./Profile.css";
 
 const Profile = () => {
+  const [profileData] = useState({
+    name: "John Doe",
+    email: "johndoe@example.com",
+    skills: "React, Node.js, CSS",
+    profileImage: "/path/to/profile-image.jpg",
+  });
+
+  const handleProfileEdit = () => {
+    // Implement profile editing functionality here
+  };
+
   return (
     <div className="profile">
-      <h2>My Profile</h2>
+      <div className="profile-header">
+        <img
+          src={profileData.profileImage}
+          alt="Profile"
+          className="profile-image"
+        />
+        <h2>{profileData.name}</h2>
+      </div>
       <div className="profile-info">
-        <h3>Name: John Doe</h3>
-        <p>Email: johndoe@example.com</p>
-        <p>Skills: React, Node.js, CSS</p>
+        <p>Email: {profileData.email}</p>
+        <p>Skills: {profileData.skills}</p>
       </div>
       <div className="profile-actions">
-        <button>Edit Profile</button>
+        <button onClick={handleProfileEdit}>Edit Profile</button>
       </div>
     </div>
   );

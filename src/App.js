@@ -1,4 +1,3 @@
-// App.js
 import React, { useState } from "react";
 import {
   BrowserRouter as Router,
@@ -9,8 +8,13 @@ import {
 import LandingPage from "./components/LandingPage";
 import SignUp from "./components/SignUp";
 import SignIn from "./components/SignIn";
-import JobSeekerDashboard from "./components/JobSeekerDashboard";
-import EmployerDashboard from "./components/EmployerDashboard";
+import JobSeekerDashboard from "./components/jobseekers/JobSeekerDashboard";
+import JobListing from "./components/jobseekers/JobListing";
+import ApplicationForm from "./components/jobseekers/ApplicationForm";
+import Messages from "./components/jobseekers/Messages";
+import Notifications from "./components/jobseekers/Notifications";
+import Profile from "./components/jobseekers/Profile";
+import EmployerDashboard from "./components/employers/EmployerDashboard";
 import SuperuserDashboard from "./components/SuperuserDashboard";
 import ProtectedRoute from "./components/ProtectedRoute";
 import "./App.css";
@@ -35,7 +39,7 @@ function App() {
           <Route path="/signup" element={<SignUp />} />
           <Route path="/signin" element={<SignIn onLogin={handleLogin} />} />
 
-          {/* Protected Routes */}
+          {/* Protected Routes for Job Seekers */}
           <Route
             path="/jobseeker/dashboard"
             element={
@@ -45,6 +49,48 @@ function App() {
             }
           />
           <Route
+            path="/jobseeker/job-listing"
+            element={
+              <ProtectedRoute userRole={userRole} requiredRole="JobSeeker">
+                <JobListing />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/jobseeker/application-form"
+            element={
+              <ProtectedRoute userRole={userRole} requiredRole="JobSeeker">
+                <ApplicationForm />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/jobseeker/messages"
+            element={
+              <ProtectedRoute userRole={userRole} requiredRole="JobSeeker">
+                <Messages />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/jobseeker/notifications"
+            element={
+              <ProtectedRoute userRole={userRole} requiredRole="JobSeeker">
+                <Notifications />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/jobseeker/profile"
+            element={
+              <ProtectedRoute userRole={userRole} requiredRole="JobSeeker">
+                <Profile />
+              </ProtectedRoute>
+            }
+          />
+
+          {/* Protected Routes for Employers */}
+          <Route
             path="/employer/dashboard"
             element={
               <ProtectedRoute userRole={userRole} requiredRole="Employer">
@@ -52,6 +98,8 @@ function App() {
               </ProtectedRoute>
             }
           />
+
+          {/* Protected Routes for Superusers */}
           <Route
             path="/superuser/dashboard"
             element={

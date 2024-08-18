@@ -1,15 +1,14 @@
 import React from "react";
-import { Link, Outlet } from "react-router-dom";
+import "./JobSeekerDashboard.css";
+import JobSeekerNavbar from "./JobSeekerNavbar";
 
 const JobSeekerDashboard = ({ onSignOut }) => {
   return (
     <div>
-      <h2>Job Seeker Dashboard</h2>
-      <nav>
-        <Link to="job-listing">View Job Listings</Link> |{" "}
-        <button onClick={onSignOut}>Sign Out</button>
-      </nav>
-      <Outlet />
+      <JobSeekerNavbar />
+      <div className="welcome-container">
+        <h1>Welcome to Your Dashboard!</h1>
+      </div>
     </div>
   );
 };

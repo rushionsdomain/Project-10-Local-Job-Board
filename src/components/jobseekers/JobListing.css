@@ -1,0 +1,55 @@
+/* JobListing.css */
+.job-listing-container {
+  padding: 20px;
+  background-color: #f4f4f4; /* Light grey background */
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333; /* Dark grey for text */
+}
+
+.job-card {
+  background-color: white;
+  border: 1px solid #ddd; /* Light grey border */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  margin-bottom: 15px;
+  padding: 15px;
+  transition: box-shadow 0.3s ease;
+}
+
+.job-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+
+.job-card h3 {
+  margin: 0;
+  font-size: 1.2em;
+  color: #333; /* Dark grey for job title */
+}
+
+.job-card p {
+  margin: 10px 0;
+  color: #666; /* Medium grey for job description */
+}
+
+.apply-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0a66c2; /* LinkedIn blue */
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.apply-button:hover {
+  background-color: #004182; /* Darker blue on hover */
+}

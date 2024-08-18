@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./ApplicationForm.css";
 
-const ApplicationForm = () => {
+const ApplicationForm = ({ jobId }) => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -20,7 +20,7 @@ const ApplicationForm = () => {
 
   return (
     <div className="application-form">
-      <h2>Apply for a Job</h2>
+      <h2>Apply for Job {jobId}</h2>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="name">Name:</label>

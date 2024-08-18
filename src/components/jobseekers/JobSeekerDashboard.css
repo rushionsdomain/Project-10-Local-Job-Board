@@ -1,0 +1,13 @@
+.welcome-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh; /* Adjust as needed */
+  text-align: center;
+  background-color: #f3f4f6; /* Light gray background */
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #0a66c2; /* LinkedIn blue */
+}

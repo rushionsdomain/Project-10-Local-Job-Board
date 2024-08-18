@@ -1,15 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Messages.css";
 
 const Messages = () => {
-  const [messages] = useState([
+  const messages = [
     {
       id: 1,
       sender: "Employer1",
       content: "Are you available for an interview?",
     },
     { id: 2, sender: "Employer2", content: "We received your application." },
-  ]);
+  ];
 
   return (
     <div className="messages">

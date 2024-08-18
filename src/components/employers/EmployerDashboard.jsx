@@ -1,15 +1,12 @@
 import React from "react";
-import { Link, Outlet } from "react-router-dom";
+import EmployerNavbar from "./EmployerNavbar";
+import { Outlet } from "react-router-dom";
 
-const EmployerDashboard = ({ onSignOut }) => {
+const EmployerDashboard = () => {
   return (
     <div>
+      <EmployerNavbar />
       <h2>Employer Dashboard</h2>
-      <nav>
-        <Link to="view-applications">View Applications</Link> |{" "}
-        <Link to="add-job">Add Job</Link> |{" "}
-        <button onClick={onSignOut}>Sign Out</button>
-      </nav>
       <Outlet />
     </div>
   );
