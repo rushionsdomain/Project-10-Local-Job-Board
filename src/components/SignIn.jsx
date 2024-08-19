@@ -1,3 +1,4 @@
+// SignIn.jsx
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./SignIn.css";
@@ -19,12 +20,7 @@ const SignIn = ({ onLogin }) => {
         if (user) {
           if (typeof onLogin === "function") {
             onLogin(user.role); // Call onLogin only if it's a function
-            // Redirect based on role
-            if (user.role === "jobseeker") {
-              navigate("/home");
-            } else {
-              navigate("/"); // Handle other roles if needed
-            }
+            navigate("/home");
           } else {
             console.error("onLogin is not a function");
             setError("Login function is not defined.");

@@ -11,38 +11,87 @@ import SignUp from "./components/SignUp";
 import Home from "./components/Home";
 import ApplicationForm from "./components/ApplicationForm";
 import JobListing from "./components/JobListing";
+import Profile from "./components/Profile";
 import ApplicationHistory from "./components/ApplicationHistory";
 import JobRecommendations from "./components/JobRecommendations";
-import ProtectedRoute from "./components/ProtectedRoute";
 import Layout from "./components/Layout";
+import ProtectedRoute from "./components/ProtectedRoute";
 
 function App() {
   const [userRole, setUserRole] = useState(null);
 
+  const handleLogin = (role) => {
+    setUserRole(role);
+  };
+
   return (
     <Router>
       <Routes>
-        {/* Public routes */}
         <Route path="/" element={<LandingPage />} />
-        <Route path="/signin" element={<SignIn onLogin={setUserRole} />} />
+        <Route path="/signin" element={<SignIn onLogin={handleLogin} />} />
         <Route path="/signup" element={<SignUp />} />
 
-        {/* Protected routes */}
         <Route
+          path="/home"
           element={
             <ProtectedRoute userRole={userRole} requiredRole="jobseeker">
-              <Layout />
+              <Layout>
+                <Home />
+              </Layout>
             </ProtectedRoute>
           }
-        >
-          <Route path="/home" element={<Home />} />
-          <Route path="/apply/:jobId" element={<ApplicationForm />} />
-          <Route path="/job-listings" element={<JobListing />} />
-          <Route path="/application-history" element={<ApplicationHistory />} />
-          <Route path="/job-recommendations" element={<JobRecommendations />} />
-        </Route>
+        />
+        <Route
+          path="/apply"
+          element={
+            <ProtectedRoute userRole={userRole} requiredRole="jobseeker">
+              <Layout>
+                <ApplicationForm />
+              </Layout>
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/job-listings"
+          element={
+            <ProtectedRoute userRole={userRole} requiredRole="jobseeker">
+              <Layout>
+                <JobListing />
+              </Layout>
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/profile"
+          element={
+            <ProtectedRoute userRole={userRole} requiredRole="jobseeker">
+              <Layout>
+                <Profile />
+              </Layout>
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/application-history"
+          element={
+            <ProtectedRoute userRole={userRole} requiredRole="jobseeker">
+              <Layout>
+                <ApplicationHistory />
+              </Layout>
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/job-recommendations"
+          element={
+            <ProtectedRoute userRole={userRole} requiredRole="jobseeker">
+              <Layout>
+                <JobRecommendations />
+              </Layout>
+            </ProtectedRoute>
+          }
+        />
 
-        {/* Redirect unknown routes to landing page */}
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </Router>

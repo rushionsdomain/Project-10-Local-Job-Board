@@ -1,3 +1,4 @@
+/* Layout.css */
 .layout {
   display: flex;
   flex-direction: column;
@@ -5,7 +6,7 @@
 }
 
 .navbar {
-  background-color: #343a40;
+  background-color: #007bff; /* Blue background */
   color: white;
   padding: 15px;
 }
@@ -30,7 +31,7 @@
 }
 
 .navbar a:hover {
-  background-color: #495057;
+  background-color: #0056b3; /* Darker blue on hover */
   border-radius: 5px;
 }
 

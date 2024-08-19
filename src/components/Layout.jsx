@@ -1,37 +1,31 @@
+// Layout.jsx
 import React from "react";
-import { Outlet, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./Layout.css";
 
-const Layout = () => {
+const Layout = ({ children }) => {
   return (
     <div className="layout">
       <nav className="navbar">
         <ul>
           <li>
+            <Link to="/home">Home</Link>
+          </li>
+          <li>
             <Link to="/job-listings">Job Listings</Link>
           </li>
           <li>
-            <Link to="/apply">Apply for a Job</Link>
+            <Link to="/apply/:jobId">Apply for Job</Link>
           </li>
           <li>
             <Link to="/profile">Profile</Link>
           </li>
           <li>
-            <Link to="/application-history">Application History</Link>
-          </li>
-          <li>
-            <Link to="/job-recommendations">Job Recommendations</Link>
-          </li>
-          <li>
-            <Link to="/" onClick={() => localStorage.removeItem("userRole")}>
-              Logout
-            </Link>
+            <Link to="/logout">Logout</Link>
           </li>
         </ul>
       </nav>
-      <main>
-        <Outlet />
-      </main>
+      <main>{children}</main>
     </div>
   );
 };
