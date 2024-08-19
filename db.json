@@ -2,137 +2,167 @@
   "users": [
     {
       "id": 1,
-      "email": "employer1@example.com",
-      "password": "password",
-      "role": "employer"
+      "name": "Francis",
+      "email": "francis@example.com",
+      "password": "Fr@nci$2024!",
+      "role": "jobseeker"
     },
     {
       "id": 2,
-      "email": "employer2@example.com",
-      "password": "password",
-      "role": "employer"
+      "name": "Christian",
+      "email": "christian@example.com",
+      "password": "Chr1$t!an2024#",
+      "role": "jobseeker"
     },
     {
       "id": 3,
-      "email": "jobseeker1@example.com",
-      "password": "password",
+      "name": "Alvin",
+      "email": "alvin@example.com",
+      "password": "Alv!n1234$%",
       "role": "jobseeker"
     },
     {
       "id": 4,
-      "email": "jobseeker2@example.com",
-      "password": "password",
+      "name": "Ahmed",
+      "email": "ahmed@example.com",
+      "password": "AhmeD$#2024!",
       "role": "jobseeker"
     },
     {
       "id": 5,
-      "email": "jobseeker3@example.com",
-      "password": "password",
+      "name": "Venus",
+      "email": "venus@example.com",
+      "password": "V3nU$2048$!",
       "role": "jobseeker"
     },
     {
       "id": 6,
-      "email": "jobseeker4@example.com",
-      "password": "password",
+      "name": "Naomi",
+      "email": "naomi@example.com",
+      "password": "N@om1#2024!",
       "role": "jobseeker"
     },
     {
       "id": 7,
-      "email": "jobseeker5@example.com",
-      "password": "password",
+      "name": "Annette",
+      "email": "annette@example.com",
+      "password": "Ann3tte$2024%",
       "role": "jobseeker"
     },
     {
       "id": 8,
-      "email": "employer3@example.com",
-      "password": "password",
-      "role": "employer"
+      "name": "Mercy",
+      "email": "mercy@example.com",
+      "password": "MercY!2048*",
+      "role": "jobseeker"
     },
     {
       "id": 9,
-      "email": "employer4@example.com",
-      "password": "password",
-      "role": "employer"
+      "name": "Marvin",
+      "email": "marvin@example.com",
+      "password": "M@rv1n_2024#",
+      "role": "jobseeker"
     },
     {
       "id": 10,
-      "email": "jobseeker6@example.com",
-      "password": "password",
+      "name": "Neema",
+      "email": "neema@example.com",
+      "password": "N33mA$2024&",
       "role": "jobseeker"
     }
   ],
   "jobs": [
     {
       "id": 1,
-      "title": "Software Engineer",
-      "description": "Develop and maintain web applications.",
-      "employerId": 1
+      "title": "Front-End Developer",
+      "company": "Tech Innovators",
+      "location": "Nairobi, Kenya",
+      "description": "Looking for a skilled front-end developer with React experience.",
+      "requirements": "3+ years experience, JavaScript, HTML, CSS, React",
+      "postedDate": "2024-08-01"
     },
     {
       "id": 2,
-      "title": "Product Manager",
-      "description": "Lead product development teams.",
-      "employerId": 2
+      "title": "Back-End Developer",
+      "company": "Global Solutions",
+      "location": "Mombasa, Kenya",
+      "description": "Seeking a back-end developer experienced in Node.js and databases.",
+      "requirements": "3+ years experience, Node.js, Express, MongoDB",
+      "postedDate": "2024-08-02"
     },
     {
       "id": 3,
-      "title": "UX Designer",
-      "description": "Design user interfaces for mobile apps.",
-      "employerId": 1
+      "title": "Full Stack Developer",
+      "company": "Future Tech",
+      "location": "Remote",
+      "description": "Hiring a full-stack developer for a remote position.",
+      "requirements": "5+ years experience, JavaScript, React, Node.js, MongoDB",
+      "postedDate": "2024-08-05"
     },
     {
       "id": 4,
-      "title": "Data Scientist",
-      "description": "Analyze large data sets.",
-      "employerId": 2
+      "title": "UX/UI Designer",
+      "company": "Creative Minds",
+      "location": "Nairobi, Kenya",
+      "description": "Looking for a creative UX/UI designer for mobile and web apps.",
+      "requirements": "2+ years experience, Figma, Sketch, Adobe XD",
+      "postedDate": "2024-08-07"
     },
     {
       "id": 5,
-      "title": "Marketing Specialist",
-      "description": "Create and manage marketing campaigns.",
-      "employerId": 3
-    },
-    {
-      "id": 6,
-      "title": "Sales Manager",
-      "description": "Manage sales teams.",
-      "employerId": 4
-    },
-    {
-      "id": 7,
-      "title": "DevOps Engineer",
-      "description": "Maintain CI/CD pipelines.",
-      "employerId": 3
-    },
-    {
-      "id": 8,
-      "title": "Customer Support",
-      "description": "Assist customers with inquiries.",
-      "employerId": 4
-    },
-    {
-      "id": 9,
-      "title": "HR Specialist",
-      "description": "Handle recruitment processes.",
-      "employerId": 1
-    },
-    {
-      "id": 10,
-      "title": "Business Analyst",
-      "description": "Analyze business processes.",
-      "employerId": 2
+      "title": "Data Analyst",
+      "company": "Data Corp",
+      "location": "Kisumu, Kenya",
+      "description": "Seeking a data analyst to work with large datasets.",
+      "requirements": "2+ years experience, SQL, Python, Excel",
+      "postedDate": "2024-08-08"
     }
   ],
   "applications": [
-    { "id": 1, "jobId": 1, "jobseekerId": 3, "status": "pending" },
-    { "id": 2, "jobId": 2, "jobseekerId": 4, "status": "pending" },
-    { "id": 3, "jobId": 3, "jobseekerId": 5, "status": "pending" },
-    { "id": 4, "jobId": 4, "jobseekerId": 6, "status": "pending" },
-    { "id": 5, "jobId": 5, "jobseekerId": 7, "status": "pending" },
-    { "id": 6, "jobId": 6, "jobseekerId": 10, "status": "pending" },
-    { "id": 7, "jobId": 7, "jobseekerId": 3, "status": "pending" },
-    { "id": 8, "jobId": 8, "jobseekerId": 4, "status": "pending" },
-    { "id": 9, "jobId": 9, "jobseekerId": 5, "status": "pending" },
-    { "id": 10, "jobId": 10, "jobseekerId": 6, "status": "pending" }
+    {
+      "id": 1,
+      "jobId": 1,
+      "userId": 1,
+      "status": "Submitted",
+      "submittedDate": "2024-08-10",
+      "resume": "https://example.com/resumes/francis-resume.pdf",
+      "coverLetter": "Looking forward to contributing my front-end skills at Tech Innovators."
+    },
+    {
+      "id": 2,
+      "jobId": 2,
+      "userId": 2,
+      "status": "Submitted",
+      "submittedDate": "2024-08-12",
+      "resume": "https://example.com/resumes/christian-resume.pdf",
+      "coverLetter": "Excited to bring my back-end expertise to Global Solutions."
+    },
+    {
+      "id": 3,
+      "jobId": 3,
+      "userId": 3,
+      "status": "Under Review",
+      "submittedDate": "2024-08-14",
+      "resume": "https://example.com/resumes/alvin-resume.pdf",
+      "coverLetter": "Ready to excel as a full-stack developer at Future Tech."
+    },
+    {
+      "id": 4,
+      "jobId": 4,
+      "userId": 4,
+      "status": "Submitted",
+      "submittedDate": "2024-08-15",
+      "resume": "https://example.com/resumes/ahmed-resume.pdf",
+      "coverLetter": "Looking forward to contributing my design skills at Creative Minds."
+    },
+    {
+      "id": 5,
+      "jobId": 5,
+      "userId": 5,
+      "status": "Under Review",
+      "submittedDate": "2024-08-16",
+      "resume": "https://example.com/resumes/venus-resume.pdf",
+      "coverLetter": "Excited to work as a data analyst with Data Corp."
+    }
   ]
 }

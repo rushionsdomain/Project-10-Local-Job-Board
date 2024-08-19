@@ -1,32 +1,42 @@
-// SignIn.js
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./SignIn.css"; // Add your styles
+import "./SignIn.css";
 
 const SignIn = ({ onLogin }) => {
-  const [role, setRole] = useState(""); // Manage user role input
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
   const navigate = useNavigate();
 
   const handleLogin = () => {
-    // Mock login logic
-    if (username && password) {
-      onLogin(role); // Set the role in the parent (App.js)
+    fetch("http://localhost:5000/users")
+      .then((response) => response.json())
+      .then((users) => {
+        const user = users.find(
+          (u) => u.name === username && u.password === password
+        );
 
-      // Redirect based on role
-      if (role === "JobSeeker") {
-        navigate("/jobseeker/dashboard");
-      } else if (role === "Employer") {
-        navigate("/employer/dashboard");
-      } else if (role === "Superuser") {
-        navigate("/superuser/dashboard");
-      } else {
-        alert("Please select a valid role");
-      }
-    } else {
-      alert("Please fill in all fields");
-    }
+        if (user) {
+          if (typeof onLogin === "function") {
+            onLogin(user.role); // Call onLogin only if it's a function
+            // Redirect based on role
+            if (user.role === "jobseeker") {
+              navigate("/home");
+            } else {
+              navigate("/"); // Handle other roles if needed
+            }
+          } else {
+            console.error("onLogin is not a function");
+            setError("Login function is not defined.");
+          }
+        } else {
+          setError("Invalid username or password");
+        }
+      })
+      .catch((error) => {
+        console.error("Error fetching users:", error);
+        setError("An error occurred. Please try again.");
+      });
   };
 
   return (
@@ -37,7 +47,11 @@ const SignIn = ({ onLogin }) => {
         <input
           type="text"
           value={username}
-          onChange={(e) => setUsername(e.target.value)}
+          onChange={(e) => {
+            setUsername(e.target.value);
+            setError(""); // Clear error on input change
+          }}
+          placeholder="Enter your username"
         />
       </div>
       <div className="form-group">
@@ -45,19 +59,17 @@ const SignIn = ({ onLogin }) => {
         <input
           type="password"
           value={password}
-          onChange={(e) => setPassword(e.target.value)}
+          onChange={(e) => {
+            setPassword(e.target.value);
+            setError(""); // Clear error on input change
+          }}
+          placeholder="Enter your password"
         />
       </div>
-      <div className="form-group">
-        <label>Select Role:</label>
-        <select value={role} onChange={(e) => setRole(e.target.value)}>
-          <option value="">Select Role</option>
-          <option value="JobSeeker">Job Seeker</option>
-          <option value="Employer">Employer</option>
-          <option value="Superuser">Superuser</option>
-        </select>
-      </div>
-      <button onClick={handleLogin}>Log In</button>
+      {error && <p className="error-message">{error}</p>}
+      <button onClick={handleLogin} className="login-button">
+        Log In
+      </button>
     </div>
   );
 };

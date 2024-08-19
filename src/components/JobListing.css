@@ -1,0 +1,31 @@
+.job-listing {
+  padding: 20px;
+}
+
+.job-filter {
+  margin-bottom: 20px;
+}
+
+.job-filter label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.job-filter select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.job-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.job-card {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}

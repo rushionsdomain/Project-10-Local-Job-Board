@@ -1,0 +1,21 @@
+.application-history {
+  padding: 20px;
+}
+
+.application-history h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.applications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.application-card {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}

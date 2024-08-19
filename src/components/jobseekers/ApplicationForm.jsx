@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./ApplicationForm.css";
 
 const ApplicationForm = ({ jobId }) => {
@@ -7,6 +8,7 @@ const ApplicationForm = ({ jobId }) => {
     email: "",
     resume: "",
   });
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -14,8 +16,16 @@ const ApplicationForm = ({ jobId }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formData);
     // Submit form data to API or server
+    fetch("/jobs", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    }).then(() => {
+      navigate("/job-seeker-dashboard");
+    });
   };
 
   return (

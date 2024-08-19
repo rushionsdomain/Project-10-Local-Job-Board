@@ -1,13 +1,13 @@
-// ProtectedRoute.js
 import React from "react";
 import { Navigate } from "react-router-dom";
 
 const ProtectedRoute = ({ userRole, requiredRole, children }) => {
   if (!userRole || userRole !== requiredRole) {
-    return <Navigate to="/signin" />; // Redirect to Sign In if no role or incorrect role
+    // Redirect to the landing page if not authorized
+    return <Navigate to="/" />;
   }
 
-  return children; // Render the dashboard component if the role matches
+  return children; // Render the protected component if authorized
 };
 
 export default ProtectedRoute;

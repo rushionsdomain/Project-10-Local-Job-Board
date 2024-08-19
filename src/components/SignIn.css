@@ -1,52 +1,52 @@
-/* SignIn.css */
-
 .signin-page {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  background-color: #f3f2ef;
-  color: #333;
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
 }
 
 .signin-page h2 {
-  font-size: 36px;
+  text-align: center;
   margin-bottom: 20px;
 }
 
 .form-group {
-  margin-bottom: 20px;
-  width: 300px;
-  display: flex;
-  flex-direction: column;
+  margin-bottom: 15px;
 }
 
 .form-group label {
+  display: block;
+  font-weight: bold;
   margin-bottom: 5px;
-  font-size: 16px;
-  color: #0073b1;
 }
 
-.form-group input,
-.form-group select {
+.form-group input {
+  width: 100%;
   padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
+  border: 1px solid #ddd;
   border-radius: 5px;
 }
 
-button {
-  padding: 10px 20px;
-  font-size: 18px;
-  background-color: #0073b1;
-  color: #fff;
+.error-message {
+  color: red;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.login-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  font-size: 1rem;
   transition: background-color 0.3s ease;
 }
 
-button:hover {
-  background-color: #005f8d;
+.login-button:hover {
+  background-color: #0056b3;
 }

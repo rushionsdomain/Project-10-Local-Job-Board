@@ -7,9 +7,16 @@ const AddJobForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic
-    console.log("Job Title:", jobTitle);
-    console.log("Job Description:", jobDescription);
+    fetch("/jobs", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ title: jobTitle, description: jobDescription }),
+    }).then(() => {
+      // Redirect to job seeker dashboard
+      window.location.href = "/job-seeker-dashboard";
+    });
   };
 
   return (

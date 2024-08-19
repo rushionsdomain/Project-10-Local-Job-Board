@@ -1,19 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./EmployerNavbar.css";
+import "./SuperuserNavbar.css";
 
-const EmployerNavbar = () => {
+const SuperuserNavbar = () => {
   return (
-    <nav className="employer-navbar">
+    <nav className="superuser-navbar">
       <ul>
         <li>
-          <Link to="/employer-dashboard">Home</Link>
+          <Link to="/superuser-dashboard">Home</Link>
         </li>
         <li>
-          <Link to="/add-job">Post Job</Link>
-        </li>
-        <li>
-          <Link to="/view-applications">View Applications</Link>
+          <Link to="/admin">Admin</Link>
         </li>
         <li>
           <Link to="/messages">Messages</Link>
@@ -32,4 +29,4 @@ const EmployerNavbar = () => {
   );
 };
 
-export default EmployerNavbar;
+export default SuperuserNavbar;

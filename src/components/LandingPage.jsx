@@ -1,15 +1,12 @@
-// LandingPage.js
 import React from "react";
 import { Link } from "react-router-dom";
-import "./LandingPage.css"; // Assuming you have some styles
+import "./LandingPage.css";
 
 const LandingPage = () => {
   return (
     <div className="landing-page">
       <h1>Welcome to Net-Work</h1>
       <p>Connecting job seekers with local opportunities.</p>
-
-      {/* Navigation buttons */}
       <div className="auth-buttons">
         <Link to="/signin">
           <button className="auth-btn">Sign In</button>
